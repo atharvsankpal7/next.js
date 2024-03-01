@@ -24,7 +24,8 @@ export default function SignupPage() {
                 toast.error(response.data.error);
                 return;
             }
-
+            toast.success("Signup successful");
+            console.log(response.data)
             router.push(`/profile/${response.data.user._id}`);
         } catch (err: any) {
             toast.error(err.message);

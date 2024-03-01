@@ -22,7 +22,6 @@ export default function LoginPage() {
                 return;
             }
             toast.success("Login successful");
-            console.log(response.data)
             router.push(`/profile/${response.data.user._id}`);
         } catch (err: any) {
             console.error(err);
